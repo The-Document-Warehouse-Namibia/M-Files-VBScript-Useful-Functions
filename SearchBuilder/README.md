@@ -2,6 +2,12 @@
 
 This is a VBScript class `SearchBuilder_` designed for building search conditions using the M-Files API.
 
+## Implementation
+
+Prior to utilizing this class, ensure its inclusion within your script. It can be seamlessly integrated by copying its contents from the MFVBScriptSearchBuilder.vbs file. Placing it at the conclusion of your script or within your functions section is recommended.
+
+This ensures that the class is readily accessible and can be employed efficiently within your VBScript environment.
+
 ## Usage
 
 To use this class, follow these steps:
