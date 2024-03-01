@@ -35,7 +35,17 @@ Class SearchBuilder_
 
 		searchConditions_.Add -1, searchCondition_
 	End Function
+	
+	Public Function WFState(wfStateID)
+		Set searchCondition_ = CreateObject("MFilesAPI.SearchCondition")
 
+		searchCondition_.Expression.DataPropertyValuePropertyDef = MFBuiltInPropertyDefState
+		searchCondition_.ConditionType = MFConditionTypeEqual
+		searchCondition_.TypedValue.SetValue MFDatatypeLookup, wfStateID
+
+		searchConditions_.Add -1, searchCondition_
+	End Function
+	
 	Public Function PropertyDef(propertyDefID, value)
 		Set searchCondition_ = CreateObject("MFilesAPI.SearchCondition")
 
