@@ -23,7 +23,7 @@ To use this class, follow these steps:
     searchBuilder.Deleted(deleteStatus)
     searchBuilder.ObjType(objectTypeID)
     searchBuilder.MFClass(classID)
-    searchBuilder.MFClass(wfStateID)
+    searchBuilder.MFState(wfStateID)
     searchBuilder.PropertyDef(propertyDefID, value)
     ```
 
