@@ -78,6 +78,7 @@ Dim searchBuilder : Set searchBuilder = New SearchBuilder_
 searchBuilder.Deleted(False)
 searchBuilder.ObjType(0)
 searchBuilder.MFClass(123)
+searchBuilder.WFState(105)
 searchBuilder.PropertyDef(456, "SomeValue")
 
 Dim searchResults : Set searchResults = searchBuilder.Find()
