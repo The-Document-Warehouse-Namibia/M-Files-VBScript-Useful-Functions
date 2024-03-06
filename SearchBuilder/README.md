@@ -83,3 +83,4 @@ searchBuilder.PropertyDef(456, "SomeValue")
 
 Dim searchResults : Set searchResults = searchBuilder.Find()
 ```
+
