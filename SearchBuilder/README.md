@@ -23,6 +23,7 @@ To use this class, follow these steps:
     searchBuilder.Deleted(deleteStatus)
     searchBuilder.ObjType(objectTypeID)
     searchBuilder.MFClass(classID)
+    searchBuilder.MFState(wfStateID)
     searchBuilder.PropertyDef(propertyDefID, value)
     ```
 
@@ -52,6 +53,12 @@ Add a search condition for the M-Files class ID.
 
 - `classID`: The ID of the M-Files class to search for.
 
+### WFState(wfStateID)
+
+Add a search condition for the M-Files workflow state ID.
+
+- `wfStateID`: The ID of the M-Files workflow state to search for.
+- 
 ### PropertyDef(propertyDefID, value)
 
 Add a search condition for a custom property definition.
@@ -71,6 +78,7 @@ Dim searchBuilder : Set searchBuilder = New SearchBuilder_
 searchBuilder.Deleted(False)
 searchBuilder.ObjType(0)
 searchBuilder.MFClass(123)
+searchBuilder.WFState(105)
 searchBuilder.PropertyDef(456, "SomeValue")
 
 Dim searchResults : Set searchResults = searchBuilder.Find()
