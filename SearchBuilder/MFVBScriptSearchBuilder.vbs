@@ -6,7 +6,7 @@ Class SearchBuilder_
 		Set searchConditions_ = CreateObject("MFilesAPI.SearchConditions")
 	End Sub
 	
-	Public Function Deleted(deleteStatus)
+	Public Sub Deleted(deleteStatus)
 		Set searchCondition_ = CreateObject("MFilesAPI.SearchCondition")
 		
 		searchCondition_.Expression.DataStatusValueType = MFStatusTypeDeleted
@@ -14,9 +14,9 @@ Class SearchBuilder_
 		searchCondition_.TypedValue.SetValue MFDatatypeBoolean, deleteStatus
 		
 		searchConditions_.Add -1, searchCondition_											
-	End Function
+	End Sub
 
-	Public Function ObjType(objectTypeID)
+	Public Sub ObjType(objectTypeID)
 		Set searchCondition_ = CreateObject("MFilesAPI.SearchCondition")
 		
 		searchCondition_.Expression.DataStatusValueType = MFStatusTypeObjectTypeID
@@ -24,9 +24,9 @@ Class SearchBuilder_
 		searchCondition_.TypedValue.SetValue MFDatatypeLookup, objectTypeID
 
 		searchConditions_.Add -1, searchCondition_
-	End Function
+	End Sub
 	
-	Public Function MFClass(classID)
+	Public Sub MFClass(classID)
 		Set searchCondition_ = CreateObject("MFilesAPI.SearchCondition")
 
 		searchCondition_.Expression.DataPropertyValuePropertyDef = MFBuiltInPropertyDefClass
@@ -34,9 +34,9 @@ Class SearchBuilder_
 		searchCondition_.TypedValue.SetValue MFDatatypeLookup, classID
 
 		searchConditions_.Add -1, searchCondition_
-	End Function
+	End Sub
 	
-	Public Function WFState(wfStateID)
+	Public Sub WFState(wfStateID)
 		Set searchCondition_ = CreateObject("MFilesAPI.SearchCondition")
 
 		searchCondition_.Expression.DataPropertyValuePropertyDef = MFBuiltInPropertyDefState
@@ -44,9 +44,9 @@ Class SearchBuilder_
 		searchCondition_.TypedValue.SetValue MFDatatypeLookup, wfStateID
 
 		searchConditions_.Add -1, searchCondition_
-	End Function
+	End Sub
 	
-	Public Function PropertyDef(propertyDefID, value)
+	Public Sub PropertyDef(propertyDefID, value)
 		Set searchCondition_ = CreateObject("MFilesAPI.SearchCondition")
 
 		searchCondition_.Expression.DataPropertyValuePropertyDef = propertyDefID
@@ -54,7 +54,7 @@ Class SearchBuilder_
 		searchCondition_.TypedValue.SetValue MFDataTypeText, value
 
 		searchConditions_.Add -1, searchCondition_
-	End Function
+	End Sub
 
 	Public Function Find()
 		Set Find = Vault.ObjectSearchOperations.SearchForObjectsByConditions(searchConditions_, MFSearchFlagNone, False)
