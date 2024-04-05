@@ -20,11 +20,11 @@ To use this class, follow these steps:
 2. **Add search conditions:**
 
     ```vbscript
-    searchBuilder.Deleted(deleteStatus)
-    searchBuilder.ObjType(objectTypeID)
-    searchBuilder.MFClass(classID)
-    searchBuilder.WFState(wfStateID)
-    searchBuilder.PropertyDef(propertyDefID, value)
+    searchBuilder.Deleted deleteStatus
+    searchBuilder.ObjType objectTypeID
+    searchBuilder.MFClass classID
+    searchBuilder.WFState wfStateID
+    searchBuilder.PropertyDef propertyDefID, value
     ```
 
 3. **Perform the search:**
@@ -75,11 +75,11 @@ Execute the search and return the search results.
 ```vbscript
 Dim searchBuilder : Set searchBuilder = New SearchBuilder_
 
-searchBuilder.Deleted(False)
-searchBuilder.ObjType(0)
-searchBuilder.MFClass(123)
-searchBuilder.WFState(105)
-searchBuilder.PropertyDef(456, "SomeValue")
+searchBuilder.Deleted False
+searchBuilder.ObjType 0
+searchBuilder.MFClass 123
+searchBuilder.WFState 105
+searchBuilder.PropertyDef 1456, "SomeValue"
 
 Dim searchResults : Set searchResults = searchBuilder.Find()
 ```
