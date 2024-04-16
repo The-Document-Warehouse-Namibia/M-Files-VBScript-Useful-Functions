@@ -46,12 +46,12 @@ Class SearchBuilder_
 		searchConditions_.Add -1, searchCondition_
 	End Sub
 	
-	Public Sub PropertyDef(propertyDefID, value)
+	Public Sub PropertyDef(propertyDefID, propertyDefDataType, value)
 		Set searchCondition_ = CreateObject("MFilesAPI.SearchCondition")
 
 		searchCondition_.Expression.DataPropertyValuePropertyDef = propertyDefID
 		searchCondition_.ConditionType = MFConditionTypeEqual
-		searchCondition_.TypedValue.SetValue MFDataTypeText, value
+		searchCondition_.TypedValue.SetValue propertyDefDataType, value
 
 		searchConditions_.Add -1, searchCondition_
 	End Sub
