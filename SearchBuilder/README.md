@@ -24,7 +24,7 @@ To use this class, follow these steps:
     searchBuilder.ObjType objectTypeID
     searchBuilder.MFClass classID
     searchBuilder.WFState wfStateID
-    searchBuilder.PropertyDef propertyDefID, value
+    searchBuilder.PropertyDef propertyDefID, propertyDefDataType, value
     ```
 
 3. **Perform the search:**
@@ -64,6 +64,7 @@ Add a search condition for the M-Files workflow state ID.
 Add a search condition for a custom property definition.
 
 - `propertyDefID`: The ID of the custom property definition.
+- `propertyDefDataType`: The data type of the property definition.
 - `value`: The value to search for.
 
 ### Find()
@@ -79,8 +80,7 @@ searchBuilder.Deleted False
 searchBuilder.ObjType 0
 searchBuilder.MFClass 123
 searchBuilder.WFState 105
-searchBuilder.PropertyDef 1456, "SomeValue"
+searchBuilder.PropertyDef 1456, MFDataTypeText, "SomeValue"
 
 Dim searchResults : Set searchResults = searchBuilder.Find()
 ```
-
